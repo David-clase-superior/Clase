@@ -1,11 +1,12 @@
-import { IMC } from "../bibliotecas/imports.js";
+import { imc, imprimirDuplicados} from "../bibliotecas/imports.js";
 
-console.log(`El imc es ${IMC(70, 1.75)}`);
+const imcJuan = imc(70, 1.75); //masa, altura
+const imcMarcos = imc(75, 1.75);
+const marcosTieneMayorImc = imcMarcos > imcJuan;
+console.log(`IMC de Juan ${imcJuan}`);
+console.log(`IMC de Marcos ${imcMarcos}`);
+console.log(`¿Tiene Marcos un IMC mayor que el de Juan?: ${marcosTieneMayorImc}`);
 
-let imcJuan = IMC(70, 1.75);
-let imcMarcos = IMC(75, 1.75);
-let tieneImcMayor = (imcJuan > imcMarcos);
+//ejercicio 3
 
-console.log(`El imc de Juan es, ${imcJuan} y el imc de Marcos es ${imcMarcos} y ${tieneImcMayor}`);
-
-console.log(`Hola mundo, hasta aqui funciona el codigo`);
+imprimirDuplicados(4,6);
