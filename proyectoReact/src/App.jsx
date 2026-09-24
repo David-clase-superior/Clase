@@ -1,122 +1,28 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React from "react";
+import "./App.css";
+import Interprete from "./UT02/Practica203/componentes/Interprete.jsx";
+import Contenedor from "./UT02/Practica203/componentes/Contenedor.jsx"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
+function App(){
+    return (
+        <>
+            <section id='center'>
+                <h2>Hola React</h2>
+                <Contenedor>
+                
+                <Interprete nombre="pepe"
+                    imagen="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAABAECAwUGB//EADEQAAIBBAAFAwMCBQUAAAAAAAABAgMEESEFEjFBUQYTYSIygXGRFEKxwdEHM3KCof/EABkBAAIDAQAAAAAAAAAAAAAAAAAEAQIDBf/EACURAAICAQQCAgIDAAAAAAAAAAABAhEDBBIhMUFREyJCYRSRof/aAAwDAQACEQMRAD8A+3ybS0QlnbLgAAAAAAAAAAUbSy33Mq1ZR0KyuN9ReeojF0XjjbHJTitsyd3FPAnOu/OUKXFVZyn+wpl1UvBrHEvJ2oXMGaxmpdGebjdOOnJfkYpXz7PRWGul5CWH0d8pKW3EVtbpVO44sdToYsqyK0Yyi4uiIxwWADUqAAAAAAAAAAAAAAAABnWmoQLs597W7GGfJ8cLLwjuYtc1m5PDFHUljOdFasm5PDF5Zz1e/g4jblK2PVSo1nVaWeb9BOrcJvDlsicpLMc4z0Zz72hXlNSpJuPfuirduiUht1+ZtaT856Hl7/8A1B4XY8RqWUoVZulLEprSzrou/U7NrZNU5QrybhnWJdDj8a9C8O4pefxjlOFVYc3TX3IYxfCm95nPd4PW8H4vTuYQq06mYTSlF/DPV2lzCpCKcll9MvqfP7CyjY2tO3t0/bjHTbzg6S4hUp+17MJVWnhpaePKLY8nxTuPRd4PlR7hEiPDL5XVNc/01F1WR47EZKStCEouLpgAAWKgAAAAAFWwAsBVPyWAClR4gzi3U8tnVuKi5WkcW72zma6drga065Fqk4i9SutRSW/Jb7n9TWBepyZcpfheEcrfNDu2LNXzPb0vBXmi4p56vCT7i9StGNNubwm8LLMY1HKWXF8v8qx0IlkrsmOOx2nytv6MJ/8Ao1RpwwsNuL+cC1u00nvbwk10GoUZP5RaCcuTKSoyq2cMtx33xkLDgV1Ulzus4RfltnVsrZZTkjrUsRjyxR0dPh3P7GctRKCqIhY8LnbTjKVbma8I6iK5fbBZPKydOMFBUhKc5TdyJAALlQAAAAfQqtLwWIwAEJdwk8RbLGVaXLArJ0iV2J1pPehC4hz58jdWehGpPfU5eRryNwTEpQwmnFp/sZe0qinFuUZY0m9MdbbfRtPsZRtmqim+qek2ZqMfRpbOXVo5ajUg2qaziP8AkbtY21xGOkpwintY34/XQ/UilHGPqkLK3UKims5bWSfjXolTtGtGilVwm13w32H6UIpdUYKKlJNpeMjMdRwEUoIo3uNYz5OjNadbLQtjmQU8pmazST4IcU0dWEuZaZdaQrbyw9jR2MU98bFJKmSAAalQAAAAAAAAFryXLAZOfxGbTS+DDUS242y+NXITqyyumRZpSejSTbWGEVhZa0c+MNw1dFUsfHllJ+Zft5NFlz5pP8BJLKfjojXbwV3clIVIuThJPnW9oJJNp5wUccNyznIOZjOe1FkrZumlhGsdoUjv8jdJZwxf5XPo0caLQeDWCyZ9zWHYtBUykh2jDSZuZ0XmKNDtYktioSl2AABoQAAAAAAQ3gAJEr2HM8jSeZfCM7mPNTbRlmjugWg6ZyKkNIpJyb30GJbRkxSMV2jdv2USIZZlZF6IIktGU4J4eDVhFCedXwawZSEcSSQ5RWDGEd5GYr6DHDjaLTlZWWnkI1Ni9Wq22lrBNPLKTyc0iyjxydS0qN6GxG1WNjsPtR2NJfx8iWSt3BYAAaMwAAACG8Io228F5LK0RFJAAKOETgkAA5PEKToT9yC+mXUVVSMuj2d6cVJNSSaPLep5R4Uo3EMqM3jC7MRy45Y25R6GsL+SoeRplorabWUczg11W4nGc6McqMdt+Rtymm008ozWTiy08TjLa/BvOPfouxKiLNybznZKcvJRythtaG1hdSJ1UotJmEYVJvEcvJpdWVWhbOu8tRWZRXjuUlvaagiyUb5Zjt5N7dOckorZjwirRv67jBvEVs79OhCnqEUkZ6bRym90uic+TZ9fJFGklBG2AJO3FJKkIPkAACQAAAAAAAAAAIyAEnk/XuJ2tCm+8m8HqpSUVltJI8N6lulf8Qio7p09J+RXVTShXsa0cG8m70en9PWMbDhdKkl9TXNL9WPVLelVeZwTfkLeSdCm85zFf0Nco2jGO1IwnKUpOT7F1Y0E/sJ/g6HaCRvlEcyJ2Q9EbpeysKUIfbFItJZWH0JyVqTjCLlOSil3ZP1SK8s8nwCMbP1Fd2sXpSaX9T1589qXaXqWrc0np1Mr5R7qzuoXVFVIfleBTS5I3KH7HtZjkts36QwBGQyOiJIAAAAAAABWclGLlJ4S7lik8dGACk+KWcPuuKf7iVz6jsqKfK5Tx4IuPT9lXqSqTU2286m0jN+m+Hd6Gf1k2Ky/kPqkOQWlXMrOFxX1RXunK3t6UuR6bjs5fFpR4fSjUnPl6LPXZ6uvwaztoc9KlyvKxhvZx52K4lXSqx5oReRDLjybqm7Z0sOXCo3BUkMenvUUPbkq1VuGuVeD0VLiFKth0qsZN9k/7Hn5+mbRxxThOHzFlI8Dq0asJULmUVFrPMt4+BiDzY1TVoWyrTZZOUXTPTqs/LJ99+RaPOoJN5fnyaJaGk2IUgueI0rWCdWWM9u557jXFaV7FYlLlh/L0ydW84ZRu6kZ1stp56tfgmlwm1p/bSj+2RfLHLk+q6GsM8GP7Ncnz2yvpPjDjVpTipYUZNaPTyur2yqQr2jXty3JD/EeBULuD5YRjUj9sktoS4VKvaX0bS8h1lhZi2n8ibwzxyq+zovUY80bS68HRt/VMdK4pYflMcj6lsn2n+MDqs7aT/24P/qXjY2yefYp5/4I6EYZ1+X+HKlk0z/F/wBm9Gp7sFNRaysrJoRFJaXQkaQm/wBAAASBD6MjGgAAIxsGgAAMLijTq03GccpilCzoW8OSjDlQAUaV2aKTqrN1FNEOCw9ABBFkKKLKKACrAnlRLWgAkAgkWlCLabSyAE0Q2zZJYRZABdFSwABIAAAAH//Z"
                 >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
+                    Esta es una biografia
+                </Interprete>
+                <Interprete nombre="pepa"
+                    imagen="data:image/jpeg;base64,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"
                 >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
-
-export default App
+                    Esta es la biografia de pepa
+                </Interprete>
+                </Contenedor>
+            </section>
+        </>
+    );
+};
+export default App;
