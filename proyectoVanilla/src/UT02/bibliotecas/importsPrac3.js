@@ -1,6 +1,6 @@
 "use strict";
 //Ejercicio 1
-function validarNumeros(...numeros){
+/*function validarNumeros(...numeros){
     return numeros.every((v, i) => {
         console.log(numeros + i);
     });
@@ -13,7 +13,7 @@ function sumarBien(...numeros){
         return console.log ("Hay un caracter");
     }
 }
-
+/*
 /*Funcion Monolitica
 
 const sumarFeos = (...numeros) => { //Rest
@@ -57,13 +57,22 @@ const multiplicarFeos = (...numeros) => {
     }
 };
 
-console.log(sumarFeos(1,2,3,4,5,6,"a"));
+const multiplicar = (num) => {
+    return num.map((v,i) => {
+        return console.log(v *= i);
+    });
+};
+
+// function tablas(num, multiplicar){
+//     for (let i = 0; i < num; i++) {
+//         return console.log(multiplicar(num));
+//     }
+// };
+
+const tablas= (function multiplicar(num) {
+    console.log(multiplicar(num));
+});
 
 
 
-
-
-
-
-
-export{validarNumeros,sumarBien};
+export{comprobarNumeros, sumarFeos, tablas,multiplicar};
