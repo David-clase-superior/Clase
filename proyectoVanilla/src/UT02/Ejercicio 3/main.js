@@ -1,5 +1,3 @@
-import {validarNumeros, sumarBien} from "../bibliotecas/importsPrac3";
+import {validarNumeros, sumarBien} from "../bibliotecas/importsPrac3.js";
 
-const array1 = ["a",2,3,4,5];
-
-sumarBien(array1);
+console.log(sumarBien(1,2,3,4,5,6,7,8,9,10));
