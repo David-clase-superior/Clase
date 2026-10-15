@@ -10,8 +10,8 @@ const textoInvertido = ((texto) =>{
     return console.log(texto.reverse());
 });
 
-const mostrarIdNombre = (usuarios)=>{
-    usuarios.map((v)=>{
+const mostrarIdNombre = (usuariosId)=>{
+    usuariosId.map((v)=>{
         console.log(`usuario: ${v.id}, tiene el nombre de ${v.nombre}.`);
     });
 };
@@ -21,5 +21,6 @@ const filtrarNumeros = (numeros) =>{
         return v > 5
     }));
 };
+
 
 export{filtrarNumeros, textoMayusculas, textoInvertido, mostrarIdNombre};
