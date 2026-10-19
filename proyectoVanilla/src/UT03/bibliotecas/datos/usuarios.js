@@ -1,12 +1,12 @@
 const usuarios = [
   {
     nombre: "Luis",
-    preferencias: { tema: "oscuro", idioma: "espaÃ±ol", edad: 25 },
+    preferencias: { tema: "claro", idioma: "español", edad: 25 },
     contacto: {
       direccion: {
         calle: "Calle falsa, 666",
         localidad: "Elda",
-        pais: "EspaÃ±a",
+        pais: "España",
       },
       correoelectronico: "correofalso@yahoo.com",
       telefono: "123456789",
@@ -14,7 +14,7 @@ const usuarios = [
   },
   {
     nombre: "Marta",
-    preferencias: { tema: "claro", idioma: "catalÃ¡n", edad: 15 },
+    preferencias: { tema: "claro", idioma: "catalan", edad: 15 },
     contacto: {
       direccion: {
         calle: "Calle tambiÃ©n falsa, 123",
@@ -27,12 +27,12 @@ const usuarios = [
   },
   {
     nombre: "Alberto",
-    preferencias: { tema: "oscuro", idioma: "espaÃ±ol", edad: 56 },
+    preferencias: { tema: "oscuro", idioma: "español", edad: 56 },
     contacto: {
       direccion: {
         calle: "Elm Street, 666",
         localidad: "Petrer",
-        pais: "EspaÃ±a",
+        pais: "España",
       },
       correoelectronico: "correonulo@yahoo.com",
       telefono: "548632478",
@@ -40,12 +40,12 @@ const usuarios = [
   },
   {
     nombre: "Jacinto",
-    preferencias: { tema: "claro", idioma: "inglÃ©s", edad: 17 },
+    preferencias: { tema: "claro", idioma: "ingles", edad: 17 },
     contacto: {
       direccion: {
         calle: "Elm Street, 667",
         localidad: "Elda",
-        pais: "EspaÃ±a",
+        pais: "España",
       },
       correoelectronico: "correofalso@gmail.com",
       telefono: "",
@@ -53,7 +53,7 @@ const usuarios = [
   },
   {
     nombre: "Rigoberta",
-    preferencias: { tema: "claro", idioma: "francÃ©s", edad: 34 },
+    preferencias: { tema: "claro", idioma: "frances", edad: 34 },
     contacto: {
       direccion: {
         calle: "Calle inexistente, 6",
@@ -65,13 +65,13 @@ const usuarios = [
     },
   },
   {
-    nombre: "Sandra",
-    preferencias: { tema: "oscuro", idioma: "espaÃ±ol", edad: 18 },
+    nombre: "Pepa",
+    preferencias: { tema: "oscuro", idioma: "español", edad: 18 },
     contacto: {
       direccion: {
         calle: "Calle de mentira, s/n",
         localidad: "Petrer",
-        pais: "EspaÃ±a",
+        pais: "España",
       },
       correoelectronico: "estecorreonoexiste@gmail.com",
       telefono: "452158697",
@@ -79,12 +79,12 @@ const usuarios = [
   },
   {
     nombre: "Sandra",
-    preferencias: { tema: "oscuro", idioma: "espaÃ±ol", edad: 18 },
+    preferencias: { tema: "oscuro", idioma: "español", edad: 18 },
     contacto: {
       direccion: {
         calle: "Calle existente, 34",
         localidad: "Petrer",
-        pais: "EspaÃ±a",
+        pais: "España",
       },
       correoelectronico: "correoinexistente@yahoo.com",
       telefono: "",

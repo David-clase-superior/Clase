@@ -1,5 +1,5 @@
 "use strict";
-import { filtrarNumeros, mostrarIdNombre, textoInvertido, textoMayusculas } from "../bibliotecas/imports.js";
+import { preferenciasUsuario, correoYahoo, mayoresDeEdad, filtrarNumeros, mostrarIdNombre, textoInvertido, textoMayusculas } from "../bibliotecas/imports.js";
 import { usuarios } from "../bibliotecas/datos/usuarios.js";
 import { usuariosId } from "../bibliotecas/datos/usuariosId.js";
 
@@ -33,32 +33,48 @@ filtrarNumeros(numeros);
 console.log(`-------------------`);
 
 console.log(`Agregar nuevo usuario:`);
-/*
-  {
-    nombre: "Luis",
-    preferencias: { tema: "oscuro", idioma: "espaÃ±ol", edad: 25 },
-    contacto: {
-      direccion: {
-        calle: "Calle falsa, 666",
-        localidad: "Elda",
-        pais: "EspaÃ±a",
-      },
-      correoelectronico: "correofalso@yahoo.com",
-      telefono: "123456789",
-    },
-  }*/
 
-//nombre
 
 let nuevoUsuario = { ...usuarios[0], nombre:"David"};
 nuevoUsuario = {
   ...nuevoUsuario,
-  preferencias: { ...nuevoUsuario.preferencias, tema: "oscuro", idioma: "espaÃ±ol", edad: 25 },
-  ...nuevoUsuario.contacto,
-  direccion: {...nuevoUsuario.contacto.direccion, calle: "MiCalle", localidad: "MiLocalidad", pais: "MiPais"},
+    preferencias: {
+      ...nuevoUsuario.preferencias,
+        tema: "Gris", idioma: "Latino", edad: 23
+    },
+
+    contacto: {
+      ...nuevoUsuario.contacto,
+        correoelectronico:"NoMolestes@gmail.com",
+        telefono:"123456789",
+
+        direccion: {
+        ...nuevoUsuario.contacto.direccion,
+        calle:"MiCalle",
+        localidad:"MiLocalidad",
+        pais:"MiPais"
+        }
+    }
 };
 
+const usuariosNuevos = {...usuarios, nuevoUsuario};
 
-console.log(nuevoUsuario);
-console.log(usuarios[1]);
- 
+console.log(usuariosNuevos);
+
+console.log(`-------------------`);
+
+console.log('Usuarios > de 18 años');
+
+console.log(mayoresDeEdad(usuarios));
+
+console.log(`-------------------`);
+
+console.log('Usuarios con correo de Yahoo');
+
+console.log(correoYahoo(usuarios));
+
+console.log(`-------------------`);
+
+console.log('Usuarios con preferencias establecidas');
+
+console.log(preferenciasUsuario(usuarios));
