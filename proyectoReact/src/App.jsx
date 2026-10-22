@@ -2,32 +2,48 @@ import React, { useState } from "react";
 import "./App.css";
 import Interprete from "./UT02/Practica203/componentes/Interprete.jsx";
 import Contenedor from "./UT02/Practica203/componentes/Contenedor.jsx"
-import boton from "./UT03/Practica 3.08/componentes/boton.jsx";
+import Boton from "./UT03/Practica3.08/componentes/Boton.jsx";
+import Listado from "./UT03/Practica3.08/componentes/Listado.jsx";
 
-function App(){
-    const [numeros, setNumeros] = useState();
+const App = () => {
+  // Origen de datos.
+   const numeroInicial = [1,2,3,4,5];
+  const [numero, setNumero] = useState(numeroInicial);
 
-    const boton_generar = () => {
-        const numeroRandom = Math.floor(Math.random() * 101);
-        setNumeros(numeroRandom);
-    };
-
-    const boton_eliminar = () => {
-        setNumeros([]);
-    };
-
-    return (
-        <>
-            <div id='center'>
-                <h2>UT03 El hook useState</h2>
-                <boton nombre='Generar' funcion={boton_generar} />
-
-
-
-
-
-            </div>
-        </>
-    );
+  // Funciones para modificar el estado.
+const generar = () => {
+  const numeroAleatorio = Math.floor(Math.random() * 101);
+  console.log("Número generado en App.jsx:", numeroAleatorio); // <-- Línea de prueba
+  setNumero([...numero, numeroAleatorio]);
 };
+const limpiar = () => {
+    setNumero([]);
+  };
+
+  const reiniciar = () => {
+    setNumero(numeroInicial);
+  };
+
+
+
+  return (
+    <>
+      <h2>Numeros.</h2>
+      <div className='botonera'>
+        <Boton nombre='Limpiar' funcion={limpiar} />
+        <Boton nombre='Reiniciar' funcion={reiniciar} />
+        <Boton nombre='generar' funcion={generar} />
+      </div>
+
+      <div>
+        {Array.isArray(numero) && numero.length ? (
+          <Listado datos={numero} />
+        ) : (
+          <p>Error</p>
+        )}
+      </div>
+    </>
+  );
+};
+
 export default App;
