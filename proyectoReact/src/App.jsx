@@ -39,7 +39,7 @@ const limpiar = () => {
         {Array.isArray(numero) && numero.length ? (
           <Listado datos={numero} />
         ) : (
-          <p>Error</p>
+          <p>Array Vacio</p>
         )}
       </div>
     </>
