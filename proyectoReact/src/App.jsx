@@ -7,7 +7,7 @@ import Listado from "./UT03/Practica3.08/componentes/Listado.jsx";
 
 const App = () => {
   // Origen de datos.
-   const numeroInicial = [1,2,3,4,5];
+  const numeroInicial = [0];
   const [numero, setNumero] = useState(numeroInicial);
 
   // Funciones para modificar el estado.
