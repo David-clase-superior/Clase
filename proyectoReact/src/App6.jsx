@@ -25,7 +25,7 @@ const valorPorDefecto = 0;
 
   return (
     <>
-    <h2>Hola</h2>
+    <h2>Contador hasta 10</h2>
     <div>
         <ContadorLimite nombre="Incrementar" funcion={incrementar} disabled={contador === 10}></ContadorLimite>
         <ContadorLimite nombre="Decrementar" funcion={decrementar} disabled={contador === 0}></ContadorLimite>

@@ -11,12 +11,14 @@ const App = () => {
   // Funciones para modificar el estado.
 const generar = () => {
   const numeroAleatorio = Math.floor(Math.random() * 101);
+  
   if(!numero.includes(numeroAleatorio)){
     setNumero([...numero, numeroAleatorio]);
   }else{
     console.log(`El numero se iba a repetir, ${numeroAleatorio}`);
   }
 }
+
 const eliminar = () => {
   setNumero([]);
 }
