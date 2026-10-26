@@ -1,9 +1,13 @@
-import React from "react";
-import ListadoElemento from "./ListadoElemento.jsx";
-const Listado = ({ datos }) => {
-  return datos.map((v, i, a) => {
-    return <ListadoElemento key={i} nombre={v} indice={i} />;
-  });
-};
+import React from 'react'
 
-export default Listado;
+const Listado = ({datos}) => {
+  return (
+    <ul>
+        {datos.map((v,i)=>(
+            <li key={i}>{i + 1} - {v}</li>
+        ))}
+    </ul>
+  )
+}
+
+export default Listado
