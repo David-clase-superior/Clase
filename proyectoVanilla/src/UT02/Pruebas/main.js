@@ -1,27 +1,43 @@
-import {comprobarIMC, sumarBien, validacion, validarNumeros} from "./pruebas.js";
+import { validacion , multiplicar, tablas} from "./pruebas.js";
 "use strict";
 
-function ejercicio1(){
-    const pesoMarcos = 80;
-    const alturaMarcos = 1.70;
-    const pesoJuan = 70;
-    const alturaJuan = 1.75;
-
-    const imcMarcos = comprobarIMC(pesoMarcos, alturaMarcos);
-    const imcJuan = comprobarIMC(pesoJuan, alturaJuan);
-    const imcMayor = imcMarcos > imcJuan;
-    console.log(`El IMC de Juan es de ${imcJuan.toFixed(2)}`);
-    console.log(`El IMC de Marcos es de ${imcMarcos.toFixed(2)}`);
-    console.log(`¿Tiene Marcos un IMC mayor que el de Juan?: ${imcMayor}`);
-}
-ejercicio1();
 
 
-const numeros = sumarBien(2,2,2,2);
 
-console.log(numeros);
+console.log(validacion(2,2,2,2,2));
 
-validarNumeros(4);
+multiplicar("a");
+tablas("a", multiplicar);
 
-const numeros2 = validacion("2");
-console.log(numeros2);
+const facturas = [124, 48, 268];
+const porcentajes = [20,15,10];
+
+const curso = {
+
+    curso: "aquí el nombre del curso",
+
+    año: 2026,
+
+    descripcion: "aquí la descripción del curso",
+
+    alumnos: [], // array vacío con los alumnos del curso.
+
+  };
+
+const mostrarInforme = (curso) =>{
+    for(let propiedades in curso){
+        console.log(`${propiedades}: ${curso[propiedades]}`);
+    }
+};
+mostrarInforme(curso);
+/*
+Ejercicio 2 - Recorriendo (objetos)
+Crea un objeto JSON denominado discente que tenga las siguientes propiedades: id, nombre,
+apellidos, aficiones (que será un array de string) y notas (que será un objeto JSON con las
+propiedades primera, segunda y tercera con las notas de cada evaluación).
+Añade los siguientes métodos:
+• calcularMedia, que calculará la nota media de las tres evaluaciones,
+• imprimirAficiones, que imprimirá pos consola las aficiones del alumnado e
+• imprimirInforme, que imprime por consola un informe completo.
+Las impresiones deben hacerse debidamente formateadas.
+ */
