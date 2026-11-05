@@ -50,6 +50,26 @@ const crearTabla = () => {
     tabla = `${tabla}</table>`;
     return tabla;
 }
+/*
+const crearTabla = () => {
+    let tabla = `<table id= "feo">`;
+    
+    let numero = 1;
+
+    for (let i = 0; i < 10 ; i++) {
+        tabla += `<tr>`;
+
+        for (let i = 0; i < 10; i++) {
+            tabla += `<td>${numero}</td>`;
+            numero++;
+        }
+        tabla += `</tr>`;
+    }
+    tabla += `</table>`;
+    return tabla;
+}
+
+*/
 console.log(crearTabla());
 document.body.insertAdjacentHTML(`beforeend`, crearTabla());
 
@@ -65,4 +85,4 @@ const idSet = setTimeout(()=>{
     console.log(celdas);
 
 }, 2000);
-//El 4 del carrusel es con left right 
+//El 4 del carrusel es con left right textarea.value
