@@ -85,4 +85,4 @@ const idSet = setTimeout(()=>{
     console.log(celdas);
 
 }, 2000);
-//El 4 del carrusel es con left right textarea.value
+//El 4 del carrusel es con left right textarea.value o .textContent
