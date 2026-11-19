@@ -1,14 +1,21 @@
 import React from 'react'
-import peliculas from "../navegacion/peliculas.json";
-
+import {peliculas} from "../navegacion/peliculas.json";
+import PeliculaDetalle from '../Contenedores/PeliculaDetalle.jsx';
 const Peliculas = () => {
   return (
-    <div>
-      <h2>Peliculas: </h2>
-      {peliculas.map((pelis)=>{
-        return <div className='peliculas' key={pelis.id}>Titulo: {pelis.nombre}</div>
-      })}
-    </div>
+    <>
+      {peliculas.map((v)=>(
+        <div className='peliculas' key={v.id}>{v.nombre}
+          <div className='datos'>
+            <div className='director'>Director: {v.director}</div>
+            <div className='clasificacion'>Clasificacion: {v.clasificacion}</div>
+            <div className='recaudacion'>Recaudación {v.recaudacion}</div>
+            <div className='nota'>Nota: {v.nota}</div>
+          </div>
+        </div>
+      ))}
+      
+    </>
   )
 }
 

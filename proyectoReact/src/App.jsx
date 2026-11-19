@@ -3,6 +3,7 @@ import Cabecera from "./Contenedores/Cabecera.jsx";
 import ContenidoMain from "./Contenedores/ContenidoMain.jsx";
 import Menu from "./routes/Menu.jsx";
 import Rutas from "./routes/Rutas.jsx"
+import Pie from "./Contenedores/Pie.jsx";
 const App = () => {
   
 
@@ -13,6 +14,7 @@ const App = () => {
           <Menu/>
           <Rutas/>
         </ContenidoMain>
+        <Pie/>
       </>
   );
 };

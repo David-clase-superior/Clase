@@ -1,12 +1,36 @@
+nav{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.pie{
+  padding: 5px;
+  border: 10px;
+  border-color: purple;
+  border-style: double;
+}
+.datos{
+  margin: 10px;
+  color: black;
+  text-transform: uppercase;
+}
+.peliculas{
+  text-align: left;
+  padding: 10px;
+  color: blueviolet;
+  font-style: italic;
+  font-weight: bold;
+
+}
 .cabecera{
   border: 4px;
-  border-color: blue;
-  border-style: dotted;
+  border-color: purple;
+  border-style: double;
 }
 .contenidomain{
   border: 4px;
-  border-color: red;
-  border-style: solid;
+  border-color: purple;
+  border-style: double;
 }
 .counter {
   font-size: 16px;
