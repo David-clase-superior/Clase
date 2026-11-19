@@ -1,3 +1,13 @@
+.cabecera{
+  border: 4px;
+  border-color: blue;
+  border-style: dotted;
+}
+.contenidomain{
+  border: 4px;
+  border-color: red;
+  border-style: solid;
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
