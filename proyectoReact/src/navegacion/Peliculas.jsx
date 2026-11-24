@@ -1,20 +1,24 @@
 import React from 'react'
 import {peliculas} from "../navegacion/peliculas.json";
-import PeliculaDetalle from '../Contenedores/PeliculaDetalle.jsx';
+import { useNavigate } from 'react-router-dom';
 const Peliculas = () => {
+const navigate = useNavigate();
+
   return (
     <>
-      {peliculas.map((v)=>(
-        <div className='peliculas' key={v.id}>{v.nombre}
-          <div className='datos'>
-            <div className='director'>Director: {v.director}</div>
-            <div className='clasificacion'>Clasificacion: {v.clasificacion}</div>
-            <div className='recaudacion'>Recaudación {v.recaudacion}</div>
-            <div className='nota'>Nota: {v.nota}</div>
-          </div>
-        </div>
-      ))}
+    <h1>Listado peliculas</h1>
+
+    {peliculas.map((v)=>(
+      <div className='peliculas' key={v.id}>
+        <h2>{v.nombre}</h2>
+        <img src={v.cartelera} alt={v.nombre} width="150"/>
+        <div>{v.clasificacion}</div>
       
+      
+      <button className='boton-pelicula'
+      onClick={()=> navigate(`/peliculas/${v.id}`)}>Ver Detalles{console.log(v.id)}</button>
+      </div>
+      ))}      
     </>
   )
 }

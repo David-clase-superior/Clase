@@ -5,6 +5,7 @@ import Peliculas from "../navegacion/Peliculas.jsx";
 import AcercaDe from "../navegacion/AcercaDe.jsx";
 import Galeria from "../navegacion/Galeria.jsx";
 import Interpretes from "../navegacion/Interpretes.jsx";
+import PeliculaDetalle from "../Contenedores/PeliculaDetalle.jsx";
 
 const Rutas = () => {
   return (
@@ -14,6 +15,7 @@ const Rutas = () => {
       <Route path="/acercade" element={<AcercaDe/>} />
       <Route path="/galeria" element={<Galeria/>} />
       <Route path="/interpretes" element={<Interpretes/>} />
+      <Route path="/peliculas/:id" element={<PeliculaDetalle/>}/>
     </Routes>
   );
 };
