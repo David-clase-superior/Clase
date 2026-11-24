@@ -9,13 +9,21 @@ import PeliculaDetalle from "../Contenedores/PeliculaDetalle.jsx";
 
 const Rutas = () => {
   return (
+    
     <Routes>
       <Route path="/" element={<Inicio />} />
       <Route path="/peliculas" element={<Peliculas/>} />
-      <Route path="/acercade" element={<AcercaDe/>} />
-      <Route path="/galeria" element={<Galeria/>} />
-      <Route path="/interpretes" element={<Interpretes/>} />
       <Route path="/peliculas/:id" element={<PeliculaDetalle/>}/>
+      <Route path="/acercade" element={<AcercaDe/>} />
+      <Route path="/interpretes" element={<Interpretes/>} />
+
+
+      //Rutas hijas de Galeria, al padre no se le cierra con /
+      {/*<Route path="/galeria" element={<Galeria/>} >
+      <Route path="/titulo" element={<GaleriaTitulo/>} />
+      <Route path="/interprete" element={<GaleriaInterprete/>} />
+      <Route path="/director" element={<GaleriaDirector/>} />
+      </Route>*/}
     </Routes>
   );
 };
