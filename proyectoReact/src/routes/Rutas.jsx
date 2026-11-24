@@ -6,7 +6,10 @@ import AcercaDe from "../navegacion/AcercaDe.jsx";
 import Galeria from "../navegacion/Galeria.jsx";
 import Interpretes from "../navegacion/Interpretes.jsx";
 import PeliculaDetalle from "../Contenedores/PeliculaDetalle.jsx";
-
+import GaleriaTitulo from "../navegacion/Galeria/GaleriaTitulo.jsx";
+import GaleriaDirector from "../navegacion/Galeria/GaleriaDirector.jsx";
+import GaleriaInterpretes from "../navegacion/Galeria/GaleriaInterpretes.jsx";
+import Error from "../navegacion/Error.jsx";
 const Rutas = () => {
   return (
     
@@ -19,11 +22,13 @@ const Rutas = () => {
 
 
       //Rutas hijas de Galeria, al padre no se le cierra con /
-      {/*<Route path="/galeria" element={<Galeria/>} >
-      <Route path="/titulo" element={<GaleriaTitulo/>} />
-      <Route path="/interprete" element={<GaleriaInterprete/>} />
-      <Route path="/director" element={<GaleriaDirector/>} />
-      </Route>*/}
+      <Route path="/galeria" element={<Galeria/>} >
+        <Route path="titulo" element={<GaleriaTitulo/>} />
+        <Route path="interprete" element={<GaleriaInterpretes/>} />
+        <Route path="director" element={<GaleriaDirector/>} />
+      </Route>
+      //Ruta de error
+      <Route path="*" element={<Error/>} />
     </Routes>
   );
 };

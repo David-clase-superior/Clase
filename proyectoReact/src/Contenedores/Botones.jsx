@@ -2,9 +2,7 @@ import React from 'react'
 
 const Botones = () => {
   return (
-    <button onClick={
-        
-    }></button>
+    <h2>Botones</h2>
   )
 }
 

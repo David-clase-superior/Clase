@@ -14,14 +14,14 @@ const PeliculaDetalle = () => {
     <div className='detalle-pelicula'>
       <h2>{pelicula.nombre}</h2>
       <img src={pelicula.cartelera} alt={pelicula.nombre} width="200"/>
-      
+      <ul>
         <li><strong>ID:</strong> {pelicula.id}</li>
         <li><strong>DIRECTOR: </strong>{pelicula.director}</li>
         <li><strong>CLASIFICACIÓN: </strong>{pelicula.clasificacion}</li>
         <li><strong>RECAUDACIÓN: </strong>{pelicula.recaudacion}</li>
         <li><strong>NOTA: </strong>{pelicula.nota}</li>
         <li><strong>RESUMEN: </strong>{pelicula.resumen}</li>
-      
+      </ul>
       <Link to="/peliculas">Volver al listado</Link>
     </div>
   );
